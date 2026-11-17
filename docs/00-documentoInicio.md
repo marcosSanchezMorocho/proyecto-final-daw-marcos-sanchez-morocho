@@ -16,7 +16,7 @@
 
 ## 3. Qué quiero hacer
 
-Quiero construir una aplicación web que permita jugar partidas de rol a distancia con amigos: cada jugador tiene su ficha de personaje, hay un tablero compartido, se pueden hacer tiradas de dados y todo lo que ocurre queda guardado como memoria de la campaña para retomarla entre sesiones. El juego es en tiempo real, por lo que varios jugadores interactúan a la vez sobre la misma partida. Como ampliación opcional, un máster con IA que permita jugar en solitario o con amigos sin necesidad de un máster humano. La idea es entregar primero un núcleo completo y funcional (fichas, dados, tablero y memoria) y, si el tiempo lo permite, añadir el máster con IA como extensión.
+Quiero construir una aplicación web que permita jugar partidas de rol a distancia con amigos: cada jugador tiene su ficha de personaje, hay un tablero compartido, se pueden hacer tiradas de dados y todo lo que ocurre queda guardado como memoria de la campaña para retomarla entre sesiones. El juego es en tiempo real, por lo que varios jugadores interactúan a la vez sobre la misma partida. Se usará definitivamente una IA como máster de la partida. El plan es empezar con un modo de un solo jugador (un jugador humano + máster IA) y, si el tiempo lo permite, añadir después el modo multijugador con varios jugadores humanos compartiendo la misma partida. El núcleo (fichas, dados, tablero y memoria) se entrega primero y debe ser completo por sí solo.
 
 ## 4. Qué problema o necesidad resuelve
 
@@ -35,7 +35,7 @@ Jugadores de rol y másteres que quieran partidas online, especialmente grupos d
 | 3 | Tablero compartido con posiciones de personajes | sí |
 | 4 | Memoria de la campaña persistente entre sesiones | sí |
 | 5 | Juego en tiempo real multijugador (WebSockets) | sí |
-| 6 | Máster con IA (ampliación opcional) | no |
+| 6 | Máster con IA (definitivo; primero modo un jugador, después multijugador) | sí |
 
 ## 7. Tecnologías previstas
 
@@ -62,7 +62,7 @@ Jugadores de rol y másteres que quieran partidas online, especialmente grupos d
 
 ## 10. Riesgos y dudas iniciales
 
-Lo que más me preocupa es el máster con IA: mantener la coherencia y el ritmo en campañas largas puede complicarse mucho. Por eso lo planteo como extensión opcional sobre un núcleo que debe ser completo por sí solo. Otros riesgos: la sincronización en tiempo real entre jugadores, el diseño de la base de datos vectorial para la memoria y el tiempo disponible para llegar a la primera versión mínima antes del 31 de marzo.
+Lo que más me preocupa es el máster con IA: mantener la coherencia y el ritmo en campañas largas puede complicarse mucho, así que empezaré por el modo de un solo jugador y dejaré el multijugador humano como mejora posterior. Otros riesgos: la sincronización en tiempo real entre jugadores, el diseño de la base de datos vectorial para la memoria y el tiempo disponible para llegar a la primera versión mínima antes del 31 de marzo.
 
 ## 11. Qué espero aprender
 
