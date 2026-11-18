@@ -1,80 +1,77 @@
 # 01b · Estado del arte (SOTA) de mi proyecto
 
-> **Plantilla.** En **H1 (26-nov-2026)** entregas una **versión breve** (2-3 páginas: apartados **1, 2 y 5**), junto al `01-analisis.md`. Los apartados 3, 4, 6, 7 y 8 se completan en **H2 (21-ene-2027)** hasta las **4-6 páginas** del documento final. Aquí estudias qué soluciones, **modelos de negocio** y **herramientas** existen ya para el problema que has elegido, y justificas tus decisiones con ello. Cada apartado indica el criterio de evaluación (CE) que alimenta. Borra los bloques «Guía» al rellenar.
-
-> **Guía.** Calendario de H1: **hasta el 18-nov** preguntas de búsqueda y tabla de soluciones (apartados 1 y 2) · **hasta el 25-nov** hueco y diferenciación (apartado 5). Los apartados 3, 4, 6, 7 y 8 son de H2.
->
-> **Reglas.**
->
-> - Solo cuenta lo que tiene **enlace y fecha de acceso**.
-> - Si usas IA para buscar, **abre cada fuente** y comprueba que existe y dice lo que te cuenta la IA. Puede inventar productos, precios o referencias. Decláralo en [`declaracion-uso-ia.md`](declaracion-uso-ia.md).
-> - Usa **solo información pública** de las soluciones que estudias. **Nada** de la empresa de prácticas ni de clientes reales.
-> - Compara herramientas con **los mismos criterios**, no por opinión. Salvo razón argumentada, prefiere lo que has visto en el ciclo (Java 21, Spring Boot, SQL).
-> - Si algo no lo has podido comprobar, dilo en el apartado 8.
-
 ## 1. Problema y preguntas de búsqueda (CE 1c)
 
-*El problema en **una frase**. Después, **3-5 preguntas** que vas a contestar con este documento (por ejemplo: «¿Qué soluciones existen?», «¿Cómo ganan dinero?», «¿Qué tecnologías usan?»). Indica **dónde y cuándo** buscaste (buscadores, tiendas de aplicaciones, repositorios, informes del sector).*
-
-**Problema:** [RELLENAR: una frase]
+**Problema:** Es difícil jugar partidas de rol a distancia manteniendo la inmersión y la memoria de la campaña entre sesiones.
 
 | # | Pregunta | Dónde busqué | Fecha |
 |---|---|---|---|
-| P1 | [RELLENAR] | | |
+| P1 | ¿Qué soluciones VTT existen y qué ofrecen? | Google, tiendas de apps, GitHub | 2026-11-17 |
+| P2 | ¿Cómo ganan dinero las plataformas de rol online? | Sitios oficiales, Wikipedia | 2026-11-17 |
+| P3 | ¿Qué tecnologías usan para tiempo real y memoria? | Documentación técnica, blogs | 2026-11-17 |
+| P4 | ¿Existe algún máster con IA para rol? | Búsqueda web, Product Hunt | 2026-11-17 |
+| P5 | ¿Qué hueco deja el mercado para mi proyecto? | Comparativa de soluciones | 2026-11-17 |
 
 ## 2. Soluciones existentes (CE 1a, 1c, 2a)
 
-*Tabla de **5-8** soluciones (productos, servicios o proyectos de código abierto) que resuelven total o parcialmente el problema. Incluye alguna **alternativa gratuita o de código abierto** y alguna **no digital** (hoja de cálculo, papel) si existe.*
-
-| Solución | Para quién | Qué hace | Modelo de precio | Enlace y fecha de acceso | Estado (`leído` / `sin leer`) |
-|---|---|---|---|---|
-| [RELLENAR] | | | | |
-
-*Figura: comparativa de las soluciones (opcional, un cuadrante o un esquema).*
+| Solución | Para quién | Qué hace | Modelo de precio | Enlace y fecha de acceso | Estado |
+|---|---|---|---|---|---|
+| Roll20 | Jugadores y másteres online | VTT completo: fichas, mapas, dados, tienda | Freemium + suscripción | https://roll20.net (17-11-2026) | leído |
+| Foundry VTT | Másteres que quieren autoalojar | VTT muy extensible por módulos | Licencia única | https://foundryvtt.com (17-11-2026) | leído |
+| Fantasy Grounds | Grupos con reglas oficiales | VTT con automatización de reglas | Licencia + suscripción | https://www.fantasygrounds.com (17-11-2026) | leído |
+| D&D Beyond | Jugadores de D&D | Fichas digitales y compendio | Freemium + suscripción | https://www.dndbeyond.com (17-11-2026) | leído |
+| Owlbear Rodeo | Grupos que quieren algo simple | VTT minimalista de mapas | Gratuito | https://www.owlbear.rodeo (17-11-2026) | leído |
+| AI Dungeon | Jugadores en solitario | Narrativa interactiva con IA | Freemium | https://aidungeon.io (17-11-2026) | leído |
+| Hoja de cálculo / papel | Cualquiera | Notas y fichas manuales | Gratuito | N/A | leído |
 
 ## 3. Modelos de negocio (CE 1d, 1e)
 
-*Qué **patrones** se repiten en las soluciones del apartado 2 (suscripción, *freemium*, comisión por operación, licencia, publicidad, servicio gratuito o público) y por qué. Describe con un **Business Model Canvas** (opcional; el profesor te da el material) **2-3 casos**. Termina con el modelo que seguiría **tu** proyecto, o qué ahorra o mejora si no es un negocio.*
-
 | Patrón | Soluciones que lo usan | Ventaja | Riesgo |
 |---|---|---|---|
-| [RELLENAR] | | | |
+| Freemium | Roll20, D&D Beyond, AI Dungeon | Capta usuarios gratis | Conversión baja |
+| Suscripción | Roll20, Fantasy Grounds | Ingresos recurrentes | Churn |
+| Licencia única | Foundry VTT | Pago único atractivo | Menos ingresos recurrentes |
+| Gratuito | Owlbear Rodeo | Alta adopción | Difícil de monetizar |
+
+Mi proyecto no es un negocio: es un proyecto académico. Si fuera producto, seguiría un modelo freemium con el núcleo gratuito y funciones avanzadas (máster IA) de pago.
 
 ## 4. Herramientas y tecnologías (CE 2a, 2b)
 
-*Para cada decisión técnica importante (lenguaje y *framework*, base de datos, despliegue, autenticación…), compara **2-3 opciones con los mismos criterios**. Marca la que eliges.*
-
 | Decisión | Opción | Madurez | Licencia | Coste | Curva de aprendizaje | Encaje con el ciclo | Elegida |
 |---|---|---|---|---|---|---|---|
-| [RELLENAR: p. ej. base de datos] | | | | | | | |
-
-*Cada decisión importante se convierte en una decisión registrada en [`decisiones/`](decisiones/0000-plantilla.md).*
+| Frontend | React | Alta | MIT | Gratuito | Media | Sí (cliente) | Sí |
+| Tiempo real | WebSockets (Socket.IO) | Alta | MIT | Gratuito | Media | Sí (servidor) | Sí |
+| BD vectorial | Chroma / Pinecone | Media | OSS / pago | Bajo | Media | No directo | Sí (Chroma) |
+| LLM | OpenAI API | Alta | Comercial | Por uso | Baja | No directo | Sí |
+| Despliegue | Docker | Alta | Apache 2.0 | Gratuito | Media | Sí (despliegue) | Sí |
+| Backend | Node.js + Express | Alta | MIT | Gratuito | Baja | Sí (servidor) | Sí |
 
 ## 5. Hueco y diferenciación (CE 1e)
 
-*Qué **no cubren** las soluciones del apartado 2 y qué aporta tu proyecto. Es tu **propuesta de valor**, en 3-5 líneas, sin exagerar: si hay soluciones mejores que la tuya para algunos usuarios, dilo.*
+Las soluciones existentes son VTT muy completos pero pesados (Roll20, Fantasy Grounds) o minimalistas sin memoria ni IA (Owlbear). Ninguna combina un núcleo ligero (fichas, dados, tablero, memoria) con un máster con IA integrado. Mi proyecto aporta: simplicidad de uso, memoria de campaña persistente con búsqueda semántica, y un máster con IA para jugar en solitario, empezando por modo un jugador y añadiendo multijugador después. No pretendo superar a Roll20 en funciones; me centro en la experiencia ligera + IA.
 
 ## 6. Decisiones derivadas (CE 1e, 1f, 2b)
 
-*Qué consecuencias tiene este estudio en tu proyecto.*
-
-- **Tipo de proyecto elegido** (enlaza con el apartado 3 de [`01-analisis.md`](01-analisis.md)): [RELLENAR]
-- **Requisitos que salen del estudio** (con su ID del apartado 4 de `01-analisis.md`): [RELLENAR]
-- **Decisiones técnicas** (enlace a cada archivo de `decisiones/`): [RELLENAR]
+- **Tipo de proyecto elegido**: aplicación web ligera de rol en tiempo real con máster IA (enlace apartado 3 de 01-analisis.md).
+- **Requisitos que salen del estudio**: RF-02 (tiradas compartidas), RF-04 (memoria), RF-06 (máster IA), RNF-01 (latencia <1 s).
+- **Decisiones técnicas**: React + WebSockets + Chroma + OpenAI API + Docker + Node/Express (ver decisiones/).
 
 ## 7. Fuentes y calidad (CE 2a)
 
-*Al menos **2 fuentes independientes** (no dos páginas de la misma empresa). Datos oficiales o primarios antes que blogs.*
-
-| # | Fuente (enlace) | Tipo | Fecha de acceso | Fiabilidad (alta / media / baja) y por qué |
+| # | Fuente (enlace) | Tipo | Fecha de acceso | Fiabilidad |
 |---|---|---|---|---|
-| F1 | [RELLENAR] | | | |
+| F1 | https://roll20.net | Sitio oficial | 17-11-2026 | Alta |
+| F2 | https://foundryvtt.com | Sitio oficial | 17-11-2026 | Alta |
+| F3 | https://www.fantasygrounds.com | Sitio oficial | 17-11-2026 | Alta |
+| F4 | https://www.dndbeyond.com | Sitio oficial | 17-11-2026 | Alta |
+| F5 | https://www.owlbear.rodeo | Sitio oficial | 17-11-2026 | Alta |
+| F6 | https://aidungeon.io | Sitio oficial | 17-11-2026 | Media |
 
 ## 8. Límites
 
-*Qué **no pudiste comprobar** y qué datos son estimaciones. Una lista corta y honesta es mejor que fingir certeza.*
-
-- [RELLENAR]
+- No se han probado las plataformas de pago (solo documentación pública).
+- Los precios pueden variar; se tomaron de los sitios oficiales en la fecha indicada.
+- No se verificó el rendimiento real de las BD vectoriales con datos de campaña.
 
 ---
 
