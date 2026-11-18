@@ -1,60 +1,110 @@
 # 01 · Análisis y documentación inicial (RA1)
 
-> **Plantilla.** Se entrega como **H1 el 26-nov-2026**. Cada apartado indica el criterio de evaluación (CE) que evidencia y qué se espera. Borra las notas en cursiva al rellenar.
-
 ## 1. Sector y empresas (CE 1a, 1b)
 
-*Clasifica **5 o más** empresas del sector por sus características organizativas y el producto o servicio que ofrecen. Describe con detalle **una empresa tipo**: organigrama (un diagrama Mermaid) y funciones de cada departamento.*
+Sector: **plataformas de juego de rol online / virtual tabletop (VTT)**. Empresas relevantes:
+
+| Empresa / producto | Características organizativas | Producto o servicio |
+|---|---|---|
+| Roll20 (The Orr Group) | Empresa pequeña/mediana, equipo distribuido, modelo SaaS | VTT con fichas, mapas, dados y tienda de contenido |
+| Foundry VTT | Empresa pequeña, licencia única de pago | VTT autoalojable, muy extensible por módulos |
+| Fantasy Grounds (SmiteWorks) | Empresa pequeña, licencia perpetua + suscripción | VTT con automatización de reglas y contenido oficial |
+| D&D Beyond (Wizards of the Coast / Hasbro) | Gran corporación, integración con marca | Gestión de fichas y compendio digital de D&D |
+| Owlbear Rodeo | Proyecto pequeño/independiente | VTT minimalista, gratuito, centrado en mapas |
+| Tabletop Simulator (Berserk Games) | Estudio indie | Simulador 3D de mesa física |
+
+**Empresa tipo: Roll20 (The Orr Group).** Organigrama simplificado:
+
+```mermaid
+flowchart TD
+    CEO[CEO / Fundador] --> ENG[Ingeniería]
+    CEO --> PROD[Producto]
+    CEO --> SUP[Soporte y comunidad]
+    CEO --> BIZ[Negocio y licencias]
+    ENG --> FE[Frontend]
+    ENG --> BE[Backend]
+    ENG --> INFRA[Infraestructura]
+    PROD --> UX[UX/UI]
+    PROD --> CONT[Contenido y tienda]
+    SUP --> MOD[Moderación]
+    BIZ --> PART[Partners editoriales]
+```
+
+Funciones: Ingeniería desarrolla y mantiene la plataforma; Producto define hoja de ruta y UX; Soporte atiende usuarios y moderación; Negocio gestiona licencias con editoriales y tienda.
 
 ## 2. Necesidades y oportunidades (CE 1c, 1d)
 
-*Lista **priorizada** de las necesidades más demandadas, con el criterio de priorización y la fuente. Valora las oportunidades de negocio con **al menos un dato cuantitativo** y su fuente.*
+Necesidades priorizadas (criterio: frecuencia de aparición en foros/comunidades y encuestas a jugadores):
+
+1. Jugar a distancia con amigos sin perder la inmersión.
+2. Mantener la memoria de la campaña entre sesiones (notas, eventos, personajes).
+3. Gestión sencilla de fichas y tiradas sin automatización excesiva.
+4. Acceso desde navegador sin instalación.
+5. Posibilidad de jugar en solitario (máster IA).
+
+Oportunidad de negocio: el mercado de VTT creció con el auge del rol online; se estima que más del 50 % de las partidas de rol se juegan ya online (fuentes: informes de la industria y comunidades como Reddit r/rpg). Un nicho claro es la combinación de VTT ligero + memoria de campaña + máster con IA para jugadores sin grupo.
 
 ## 3. Tipo de proyecto elegido (CE 1e)
 
-*Qué proyecto das como respuesta y por qué, frente a otras alternativas.*
+Proyecto elegido: **aplicación web de partidas de rol en tiempo real con máster IA**, frente a alternativas como un VTT completo tipo Roll20 (demasiado alcance) o un simple gestor de fichas (insuficiente). Se opta por un núcleo completo (fichas, dados, tablero, memoria, tiempo real) más un máster con IA como extensión, equilibrando alcance y tiempo disponible.
 
 ## 4. Requisitos y restricciones (CE 1f)
 
-*Características que debe cumplir el proyecto, redactadas de forma **verificable** (no «debe ser rápido», sino «responde en menos de 2 s»). Parte de lo que has encontrado en [`01b-sota.md`](01b-sota.md).*
-
-> **Guía.** Numera los requisitos **funcionales** como **RF-01, RF-02…** (qué hace el sistema) y los **no funcionales** como **RNF-01…** (cómo lo hace: rendimiento, seguridad, usabilidad, disponibilidad, accesibilidad). Las **restricciones** (plazo, presupuesto, tecnología obligatoria, normativa) como **REST-01…**. Cada requisito debe tener **una medida o una prueba**. Si aún no sabes cómo lo probarás, escribe «pendiente» y complétalo antes de H3.
-
 | ID | Requisito | Tipo (funcional / no funcional / restricción) | Cómo se verifica |
 |---|---|---|---|
-| RF-01 | [RELLENAR] | funcional | |
-| RNF-01 | [RELLENAR] | no funcional | |
-| REST-01 | [RELLENAR] | restricción | |
+| RF-01 | El usuario puede crear y editar una ficha de personaje | funcional | Prueba manual: crear ficha y comprobar persistencia |
+| RF-02 | El usuario puede realizar tiradas de dados y ver el resultado compartido | funcional | Prueba: tirada visible para todos los jugadores en <1 s |
+| RF-03 | Los jugadores comparten un tablero con posiciones de personajes | funcional | Prueba: movimiento visible en tiempo real |
+| RF-04 | El sistema guarda y recupera la memoria de la campaña entre sesiones | funcional | Prueba: cerrar y reabrir partida y comprobar datos |
+| RF-05 | Varios jugadores interactúan en tiempo real sobre la misma partida | funcional | Prueba con 3+ clientes conectados |
+| RF-06 | Un máster con IA conduce la partida en modo un jugador | funcional | Prueba: partida completa con IA como máster |
+| RNF-01 | Las acciones en tiempo real se reflejan en menos de 1 s | no funcional | Medición con timestamps en cliente |
+| RNF-02 | La interfaz es usable en navegador de escritorio | no funcional | Prueba manual en Chrome/Firefox |
+| RNF-03 | Los datos se persisten en base de datos | no funcional | Reinicio del servidor mantiene datos |
+| REST-01 | Plazo de entrega: primera versión mínima antes del 31-03-2027 | restricción | Calendario del proyecto |
+| REST-02 | Tecnologías: React, WebSockets, BD vectorial, API LLM, Docker | restricción | Stack definido en el repo |
+| REST-03 | No se usan datos personales reales | restricción | Revisión de datos de ejemplo |
 
 ### Matriz de trazabilidad
 
-*Une cada objetivo con sus requisitos, y estos con lo que los implementa y los comprueba. Se rellena por completo al final del proyecto; en H1 basta con **objetivo y requisito**.*
-
-> **Guía.** Ejemplo ficticio: *OBJ-01 Gestionar citas → RF-02 Crear una cita → CU-03 → `POST /citas` → prueba P-07.* Cada RF y cada RNF de la tabla anterior debe aparecer aquí.
-
 | Objetivo | Requisito | Caso de uso | Pantalla o endpoint | Prueba o indicador |
 |---|---|---|---|---|
-| OBJ-01 [RELLENAR] | RF-01 | | | pendiente |
+| OBJ-01 Gestionar fichas de personaje | RF-01 | CU-01 Crear ficha | /fichas | P-01 |
+| OBJ-02 Realizar tiradas de dados | RF-02 | CU-02 Tirar dados | WebSocket /dados | P-02 |
+| OBJ-03 Compartir tablero | RF-03 | CU-03 Mover ficha | /tablero | P-03 |
+| OBJ-04 Persistir memoria de campaña | RF-04 | CU-04 Guardar/recuperar | /campana | P-04 |
+| OBJ-05 Juego en tiempo real | RF-05 | CU-05 Sincronizar | WebSocket | P-05 |
+| OBJ-06 Máster con IA | RF-06 | CU-06 Jugar con IA | /ia-master | P-06 |
 
 ## 5. Obligaciones fiscales, laborales y de prevención (CE 1g)
 
-*Las obligaciones que aplican a tu proyecto, **con su norma** y sus condiciones.*
+Al ser un proyecto académico sin empresa ni empleados, no aplican obligaciones fiscales ni laborales. Se aplican obligaciones de protección de datos (RGPD) si se trataran datos personales; por ello se usan únicamente datos de ejemplo. Prevención de riesgos: ergonomía en el puesto de trabajo y descansos frente a pantallas.
 
 ## 6. Ayudas y subvenciones (CE 1h)
 
-*Al menos **una** ayuda real: fuente, requisitos y plazo.*
+Ayuda real: **Kit Digital** (programa del Gobierno de España para digitalización de pymes y autónomos), que incluye soluciones de presencia en internet y gestión de clientes. Requisitos: ser pyme/autónomo, estar al corriente de obligaciones tributarias y con la Seguridad Social. Plazo: convocatorias periódicas. Fuente: red.es / sedes electrónicas oficiales.
 
 ## 7. Guion de trabajo (CE 1i)
 
-*Fases, hitos y responsables del proyecto. Puede enlazar al tablero de GitHub Projects.*
+Fases e hitos:
+- H1 (26-nov-2026): análisis y documentación inicial.
+- H2 (dic-2026/ene-2027): diseño (02-diseno.md) y planificación.
+- H3 (ene/feb-2027): desarrollo del núcleo (fichas, dados, tablero, memoria, tiempo real).
+- H4 (feb/mar-2027): integración del máster con IA y pruebas.
+- Entrega final (antes del 31-03-2027): documentación y despliegue con Docker.
+
+Responsable único: Marcos Sánchez Morocho. Tablero de seguimiento en GitHub Projects del repositorio.
 
 ## 8. Glosario
 
-*Una cosa, un nombre: define los términos del dominio y de tu proyecto, y anota los sinónimos que **no** vas a usar en ningún documento. Con **5 términos** basta; crece con el proyecto.*
-
 | Término | Definición | Sinónimos que NO uso |
 |---|---|---|
-| [RELLENAR] | | |
+| VTT (Virtual Tabletop) | Plataforma online para jugar rol con mapas y fichas | mesa virtual (evitar) |
+| Ficha de personaje | Hoja con atributos, habilidades y equipo del personaje | hoja de personaje |
+| Campaña | Serie de sesiones de juego conectadas por una historia | partida larga |
+| Máster (MJ) | Persona o IA que narra y dirige la partida | director de juego |
+| Memoria de campaña | Registro persistente de eventos y estado de la partida | historial |
+| WebSockets | Protocolo de comunicación bidireccional en tiempo real | socket (ambiguo) |
 
 ---
 
