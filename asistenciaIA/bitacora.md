@@ -6,4 +6,11 @@ Esta bitácora **hace de declaración de uso de IA** del módulo.
 
 | Fecha | Agente y modelo | Qué pedí | Qué acepté o cambié | Dónde quedó | Revisión humana |
 |---|---|---|---|---|---|
-| *(ejemplo ficticio, bórralo)* 2026-11-17 | `guia` con `opencode/deepseek-v4.1-flash-free` | «Guíame en el paso 0» | Seguí sus pasos; el nombre del repositorio lo cambié a mano | (sin ficheros) | sí |
+
+## Desde 2026-11-23 (formato simplificado)
+
+| Fecha | Agente y modelo | Qué se pidió y qué decidí yo | Dónde quedó |
+|---|---|---|---|
+| 2026-11-23 | `documentador` · `opencode/big-pickle` | Aportó su descripción del proyecto y el agente redactó los apartados 1–8; después la matriz se rehízo con objetivos medibles (OBJ-01 a OBJ-04) | `docs/01-analisis.md` |
+| 2026-11-23 | `documentador` · `opencode/big-pickle` | Aportó su descripción del proyecto y el agente redactó los apartados 1–8 (7 soluciones, patrones, hueco y límites); fuentes «leído» sin comprobar | `docs/01b-sota.md` |
+| 2026-11-23 | `documentador` · `opencode/big-pickle` | Aportó su descripción del proyecto y el agente redactó los 11 apartados del documento de inicio | `docs/00-documentoInicio.md` |
