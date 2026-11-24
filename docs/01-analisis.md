@@ -97,18 +97,37 @@ Proyecto elegido: **aplicación web de partidas de rol en tiempo real con máste
 
 ## 6. Ayudas y subvenciones (CE 1h)
 
-Ayuda real: **Kit Digital** (programa del Gobierno de España para digitalización de pymes y autónomos), que incluye soluciones de presencia en internet y gestión de clientes. Requisitos: ser pyme/autónomo, estar al corriente de obligaciones tributarias y con la Seguridad Social. Plazo: convocatorias periódicas. Fuente: red.es / sedes electrónicas oficiales.
+**Ayuda elegida: ayudas a la transformación Digital 2026** (Agencia de Ciencia, Competitividad e Innovación Asturiana / SEKUENS).
+
+- **Convocatoria:** Resolución de 20 de marzo de 2026, BDNS **894735** — https://www.infosubvenciones.es/bdnstrans/ge/es/convocatoria/894735
+- **Quién puede pedirla:** pymes y empresarios individuales con centro de trabajo en Asturias, de los sectores industrial, servicios industriales (incluida logística) y construcción. Los autónomos deben contar con un empleado, computando el propio autónomo. Quedan excluidas comunidades de bienes, sociedades civiles, asociaciones, fundaciones, entidades sin ánimo de lucro y empresas en disolución.
+- **Qué cubre:** proyectos de inversión en el Principado que implanten y desarrollen soluciones en el ámbito de la industria 4.0.
+- **Cuánto:** 1.500.000 € como cuantía máxima de la convocatoria en 2026, ampliables en 750.000 €. El extracto no da un importe por proyecto.
+- **Plazo:** desde el día siguiente a la publicación del extracto hasta las 14:00 del 05/05/2026 (hora peninsular). **Cerrada** a 2026-11-24.
+- **Cómo se solicita:** los modelos normalizados de solicitud y cuenta justificativa están en el portal de la Agencia, `www.sekuens.es`.
+- **Bases reguladoras:** Resolución de 02/07/2024 (BOPA n.º 134, 10/07/2024); enlace pendiente, `sin leer`.
+- **Estado de la fuente:** extracto leído el 2026-11-24.
+- **Encaje con mi proyecto:** es una ayuda de digitalización, pero hoy no encaja: el proyecto es académico y personal, sin centro de trabajo en Asturias ni actividad industrial.
+
+**Lo que no pude comprobar**
+
+- No se han abierto las bases reguladoras; los datos vienen del extracto publicado en la BDNS.
+- El extracto no detalla gastos subvencionables concretos ni la cuantía por beneficiario.
+- No se ha comprobado si existe otra convocatoria abierta a fecha 2026-11-24.
 
 ## 7. Guion de trabajo (CE 1i)
 
-Fases e hitos:
-- H1 (26-nov-2026): análisis y documentación inicial.
-- H2 (dic-2026/ene-2027): diseño (02-diseno.md) y planificación.
-- H3 (ene/feb-2027): desarrollo del núcleo (fichas, dados, tablero, memoria, tiempo real).
-- H4 (feb/mar-2027): integración del máster con IA y pruebas.
-- Entrega final (antes del 31-03-2027): documentación y despliegue con Docker.
+| Fase | Fechas | Tareas principales | Responsable | Hito |
+|---|---|---|---|---|
+| 1 Análisis | 6-nov a 26-nov-2026 | Completar la documentación de inicio y el análisis (apartados 1–6 de `01-analisis.md`); revisar los requisitos RF/RNF/REST y la matriz de trazabilidad | yo; tutor (revisión) | H1 26-nov-2026 |
+| 2 Diseño | 26-nov a 10-dic-2026 | Diseñar la arquitectura de la aplicación (React, Node/Express, WebSockets y base de datos vectorial); diseñar la interfaz de fichas, tablero y chat; diseñar el modelo de datos de la memoria de campaña | yo | — |
+| 3 Planificación | 10-dic-2026 a 21-ene-2027 | Planificar las entregas y preparar el tablero de seguimiento en GitHub Projects; registrar las decisiones técnicas (stack, base de datos vectorial, API del LLM) en `decisiones/`; preparar el plan de pruebas de los requisitos RF y RNF | yo; tutor (revisión) | H2 21-ene-2027 |
+| 4 Implementación | 21-ene a 31-mar-2027 | Implementar fichas, tiradas de dados y tablero compartido (RF-01 a RF-03); implementar la memoria de campaña persistente y la sincronización en tiempo real (RF-04 y RF-05); integrar el máster con IA en modo un jugador (RF-06) | yo | — |
+| 5 Pruebas | 1-abr a 23-abr-2027 | Ejecutar las pruebas funcionales de los requisitos RF-01 a RF-06; medir la latencia en tiempo real (<1 s) y comprobar la persistencia de la memoria tras reiniciar; registrar las incidencias encontradas y corregirlas | yo | — |
+| 6 Despliegue | 26-abr a 7-may-2027 | Preparar el despliegue con Docker y la configuración del entorno (sin claves reales en el repositorio); publicar la aplicación y comprobar que se abre en un navegador; terminar la documentación final y preparar la entrega | yo; tutor (revisión) | H3 7-may-2027 |
+| 7 Seguimiento, control y cierre | 11-feb a 18-jun-2027 | Revisar el avance semanal y actualizar `docs/registro-tutoria.md`; controlar que el tablero de tareas esté al día; cerrar la documentación y preparar la entrega final | yo | — |
 
-Responsable único: Marcos Sánchez Morocho. Tablero de seguimiento en GitHub Projects del repositorio.
+Tablero de seguimiento: GitHub Projects del repositorio.
 
 ## 8. Glosario
 
