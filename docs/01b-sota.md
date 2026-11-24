@@ -48,7 +48,15 @@ Mi proyecto no es un negocio: es un proyecto académico. Si fuera producto, segu
 
 ## 5. Hueco y diferenciación (CE 1e)
 
-Las soluciones existentes son VTT muy completos pero pesados (Roll20, Fantasy Grounds) o minimalistas sin memoria ni IA (Owlbear). Ninguna combina un núcleo ligero (fichas, dados, tablero, memoria) con un máster con IA integrado. Mi proyecto aporta: simplicidad de uso, memoria de campaña persistente con búsqueda semántica, y un máster con IA para jugar en solitario, empezando por modo un jugador y añadiendo multijugador después. No pretendo superar a Roll20 en funciones; me centro en la experiencia ligera + IA.
+Roll20 es un VTT completo (fichas, mapas, dados, tienda) y en la tabla no aparece un máster con IA para quien no quiere hacer de máster.
+
+AI Dungeon ofrece narrativa interactiva con IA y en la tabla no se presenta como un VTT con fichas, mapas y dados conectados.
+
+Mi proyecto aporta un núcleo ligero con memoria persistente y máster IA, primero para un jugador y después para multijugador.
+
+En mi opinión, Owlbear Rodeo sigue siendo mejor para un máster que domina su sistema y quiere un VTT minimalista; Roll20 y D&D Beyond, para grupos con máster humano que usan sistemas y compendios preparados.
+
+En mi opinión, AI Dungeon sigue siendo mejor para quien quiere jugar en solitario con un sistema basado en texto.
 
 ## 6. Decisiones derivadas (CE 1e, 1f, 2b)
 
