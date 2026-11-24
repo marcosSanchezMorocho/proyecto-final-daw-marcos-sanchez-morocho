@@ -81,7 +81,19 @@ Proyecto elegido: **aplicación web de partidas de rol en tiempo real con máste
 
 ## 5. Obligaciones fiscales, laborales y de prevención (CE 1g)
 
-Al ser un proyecto académico sin empresa ni empleados, no aplican obligaciones fiscales ni laborales. Se aplican obligaciones de protección de datos (RGPD) si se trataran datos personales; por ello se usan únicamente datos de ejemplo. Prevención de riesgos: ergonomía en el puesto de trabajo y descansos frente a pantallas.
+| Obligación | Por qué le toca | Norma (con enlace) | Estado |
+|---|---|---|---|
+| IVA, si la web llegara a facturar | Hoy por hoy no facturaría la web, pero si en algún momento llegara a convertirse en un negocio, quien presta el servicio pasará a ser empresario o profesional. Se apoya en el apartado de sujetos pasivos: «las personas físicas o jurídicas que tengan la condición de empresarios o profesionales y realicen las entregas de bienes o presten los servicios sujetos al Impuesto» | BOE-A-1992-28740 — https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740 | leído solo el apartado de sujetos pasivos, 2026-11-23 |
+| Contratación de personal, si la hubiera | No contrataré a nadie, así que hoy no me toca; si contratara a alguien, prestaría servicios retribuidos por cuenta ajena. La norma dice: «Esta ley será de aplicación a los trabajadores que voluntariamente presten sus servicios retribuidos por cuenta ajena y dentro del ámbito de organización y dirección de otra persona, física o jurídica, denominada empleador o empresario» | BOE-A-2015-11430 (Estatuto de los Trabajadores) — https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430 | leído, 2026-11-24 |
+| Prevención de riesgos laborales (trabajo con pantallas) | No contrataré a nadie, así que hoy no me toca; si una persona trabajara habitualmente con pantallas, le aplicaría esta norma. Dice: «Trabajador: cualquier trabajador que habitualmente y durante una parte relevante de su trabajo normal utilice un equipo con pantalla de visualización» | PANTALLAS DE VISUALIZACIÓN: REAL DECRETO 488/1997 SOBRE DISPOSICIONES MÍNIMAS DE SEGURIDAD Y SALUD RELATIVAS AL TRABAJO CON EQUIPOS QUE INCLUYEN PANTALLAS DE VISUALIZACIÓN — https://www.insst.es/documents/d/portal-insst/tema-65-pantallas-de-visualizacion-de-datos | leído, 2026-11-24 |
+| Protección de datos de los usuarios | La aplicación guardará nombre de usuario, correo y contraseña para iniciar sesión, que son datos personales. La norma define dato personal como «toda información sobre una persona física identificada o identificable (el interesado)» | RGPD, Reglamento (UE) 2016/679 — https://www.aepd.es/documento/reglamento-ue-2016-679-consolidado.pdf | leído, 2026-11-24 |
+
+**Lo que no pude comprobar**
+
+- Las normas del IVA y del Estatuto se han leído solo en el apartado indicado en la tabla, no completas.
+- Los PDF del INSST y del RGPD no los he abierto yo: los ha leído la persona.
+- No hay actividad económica, así que las obligaciones fiscal y laboral son para el caso de que la web llegue a ser un negocio.
+- No se ha revisado si la aplicación cumple de verdad el RGPD; solo se nombra la norma.
 
 ## 6. Ayudas y subvenciones (CE 1h)
 

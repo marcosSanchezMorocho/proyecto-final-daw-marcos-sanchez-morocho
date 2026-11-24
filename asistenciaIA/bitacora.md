@@ -14,3 +14,4 @@ Esta bitácora **hace de declaración de uso de IA** del módulo.
 | 2026-11-23 | `documentador` · `opencode/big-pickle` | Aportó su descripción del proyecto y el agente redactó los apartados 1–8; después la matriz se rehízo con objetivos medibles (OBJ-01 a OBJ-04) | `docs/01-analisis.md` |
 | 2026-11-23 | `documentador` · `opencode/big-pickle` | Aportó su descripción del proyecto y el agente redactó los apartados 1–8 (7 soluciones, patrones, hueco y límites); fuentes «leído» sin comprobar | `docs/01b-sota.md` |
 | 2026-11-23 | `documentador` · `opencode/big-pickle` | Aportó su descripción del proyecto y el agente redactó los 11 apartados del documento de inicio | `docs/00-documentoInicio.md` |
+| 2026-11-24 | `documentador` · `opencode/deepseek-v4.1-flash-free` | Pidió pasar el apartado 5 a tabla; aportó IVA, Estatuto, pantallas y RGPD, mantuvo el freemium y decidió no contratar; añadió «lo que no pude comprobar» | `docs/01-analisis.md` |
