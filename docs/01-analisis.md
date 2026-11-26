@@ -42,7 +42,7 @@ Necesidades priorizadas (criterio: frecuencia de aparición en foros/comunidades
 4. Acceso desde navegador sin instalación.
 5. Posibilidad de jugar en solitario (máster IA).
 
-Oportunidad de negocio: el mercado de VTT creció con el auge del rol online; se estima que más del 50 % de las partidas de rol se juegan ya online (fuentes: informes de la industria y comunidades como Reddit r/rpg). Un nicho claro es la combinación de VTT ligero + memoria de campaña + máster con IA para jugadores sin grupo.
+Oportunidad de negocio: el mercado de VTT creció con el auge del rol online; una gran parte de las partidas de rol se juegan ya online. Un nicho claro es la combinación de VTT ligero + memoria de campaña + máster con IA para jugadores sin grupo.
 
 ## 3. Tipo de proyecto elegido (CE 1e)
 

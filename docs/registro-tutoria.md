@@ -8,4 +8,4 @@ Una entrada **cada semana**. El tutor puede comentar aspectos técnicos en el Pu
 
 | Fecha | Horas gestión/doc. | Horas producto | Decisiones técnicas | Avances | Bloqueos | Siguiente paso |
 |---|---|---|---|---|---|---|
-| 2026-11-06 | | | | | | |
+| 2026-11-24 | 4 | 0 | Stack previsto en la documentación (React, WebSockets, Chroma, API de LLM), pendiente de validar al implementar | Pasos 5 a 8 de H1 completados (obligaciones, ayudas, guion y hueco del SOTA) | He creado un comando para OpenCode que hace git add y commit con mensajes autogenerados; está en .gitignore y no sé si debe estar ignorado | Hacer el paso 9 |
